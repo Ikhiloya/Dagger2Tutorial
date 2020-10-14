@@ -21,15 +21,15 @@ public class DieselEngineModule {
         this.horsePower = horsePower;
     }
 
-//    @Provides
-//    public DieselEngineModule provideHorsePower() {
-//        Log.d(TAG, "provideHorsePower: ");
-//        return this;
-//    }
+    @Provides
+    public int provideHorsePower() {
+        Log.d(TAG, "provideHorsePower: ");
+        return horsePower;
+    }
 
     @Provides
-    Engine providesEngine() {
+    Engine providesEngine(DieselEngine engine) {
         Log.d(TAG, "providesEngine: ");
-        return new DieselEngine(horsePower);
+        return engine;
     }
 }
