@@ -30,6 +30,7 @@ public class Car {
     @Inject  // use method injection when you want to inject the class as a reference.
     // This ensures that the class has been fully constructed before using it's instance
     public void enableRemote(Remote remote) {
+        engine.start();
         remote.setListener(this);
     }
 

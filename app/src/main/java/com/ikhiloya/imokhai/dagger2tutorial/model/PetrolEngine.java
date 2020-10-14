@@ -4,14 +4,15 @@ import android.util.Log;
 
 import javax.inject.Inject;
 
-public class Remote {
+public class PetrolEngine implements Engine {
     private static final String TAG = "Car";
 
     @Inject
-    public Remote() {
+    public PetrolEngine() {
     }
 
-    public void setListener(Car car) {
-        Log.d(TAG, "Remote Connected");
+    @Override
+    public void start() {
+        Log.d(TAG, "petrol engine started");
     }
 }

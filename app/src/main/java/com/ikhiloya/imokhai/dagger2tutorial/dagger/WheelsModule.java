@@ -1,4 +1,8 @@
-package com.ikhiloya.imokhai.dagger2tutorial.model;
+package com.ikhiloya.imokhai.dagger2tutorial.dagger;
+
+import com.ikhiloya.imokhai.dagger2tutorial.model.Rims;
+import com.ikhiloya.imokhai.dagger2tutorial.model.Tyres;
+import com.ikhiloya.imokhai.dagger2tutorial.model.Wheels;
 
 import dagger.Module;
 import dagger.Provides;

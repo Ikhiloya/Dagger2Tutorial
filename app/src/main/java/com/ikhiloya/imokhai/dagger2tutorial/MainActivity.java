@@ -4,8 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.ikhiloya.imokhai.dagger2tutorial.di.CarComponent;
-import com.ikhiloya.imokhai.dagger2tutorial.di.DaggerCarComponent;
+import com.ikhiloya.imokhai.dagger2tutorial.dagger.CarComponent;
+import com.ikhiloya.imokhai.dagger2tutorial.dagger.DaggerCarComponent;
 import com.ikhiloya.imokhai.dagger2tutorial.model.Car;
 
 import javax.inject.Inject;
