@@ -2,8 +2,12 @@ package com.ikhiloya.imokhai.dagger2tutorial.model;
 
 import android.util.Log;
 
+import com.ikhiloya.imokhai.dagger2tutorial.dagger.PerActivity;
+
 import javax.inject.Inject;
 
+//here we want to make th
+@PerActivity
 public class Car {
     private static final String TAG = "Car";
     private Driver driver;
