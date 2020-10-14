@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     //Field Injection
     //As a general rule: field Injection is for Framework types that the android system instantiates like the Activities and Fragments
     @Inject
-    public Car car;
+    public Car car1, car2;
 
 //    private Car car;
 
@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
                 .build();
 //        car = carComponent.getCar();
         carComponent.inject(this);
-        car.drive();
+        car1.drive();
+        car2.drive();
     }
 }

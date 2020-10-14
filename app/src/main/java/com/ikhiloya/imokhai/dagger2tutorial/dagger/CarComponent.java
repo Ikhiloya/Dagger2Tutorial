@@ -4,10 +4,11 @@ import com.ikhiloya.imokhai.dagger2tutorial.MainActivity;
 import com.ikhiloya.imokhai.dagger2tutorial.model.Car;
 
 import javax.inject.Named;
+import javax.inject.Singleton;
 
 import dagger.BindsInstance;
 import dagger.Component;
-
+@Singleton
 @Component(modules = {WheelsModule.class, PetrolEngineModule.class})
 //Access point- Used to access the dependency graph. Without which Dagger wouldn't work
 public interface CarComponent {
