@@ -6,7 +6,6 @@ import android.os.Bundle;
 
 import com.ikhiloya.imokhai.dagger2tutorial.dagger.CarComponent;
 import com.ikhiloya.imokhai.dagger2tutorial.dagger.DaggerCarComponent;
-import com.ikhiloya.imokhai.dagger2tutorial.dagger.DieselEngineModule;
 import com.ikhiloya.imokhai.dagger2tutorial.model.Car;
 
 import javax.inject.Inject;
@@ -27,7 +26,8 @@ public class MainActivity extends AppCompatActivity {
 //        CarComponent carComponent = DaggerCarComponent.create();
         CarComponent carComponent = DaggerCarComponent
                 .builder()
-                .dieselEngineModule(new DieselEngineModule(90000))
+                .horsePower(1000)
+                .engineCapacity(500)
                 .build();
 //        car = carComponent.getCar();
         carComponent.inject(this);
