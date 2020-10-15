@@ -4,7 +4,9 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.ikhiloya.imokhai.dagger2tutorial.dagger.CarComponent;
+import com.ikhiloya.imokhai.dagger2tutorial.dagger.ActivityComponent;
+import com.ikhiloya.imokhai.dagger2tutorial.dagger.AppComponent;
+import com.ikhiloya.imokhai.dagger2tutorial.dagger.DaggerActivityComponent;
 import com.ikhiloya.imokhai.dagger2tutorial.model.Car;
 
 import javax.inject.Inject;
@@ -30,8 +32,14 @@ public class MainActivity extends AppCompatActivity {
 //                .build();
 //        car = carComponent.getCar();
 
-        CarComponent carComponent = ((ExampleApp) getApplication()).getAppComponent();
-        carComponent.inject(this);
+        AppComponent appComponent = ((ExampleApp) getApplication()).getAppComponent();
+        ActivityComponent activityComponent = DaggerActivityComponent.builder()
+                .horsePower(333)
+                .engineCapacity(222)
+                .appComponent(appComponent)
+                .build();
+
+        activityComponent.inject(this);
         car1.drive();
         car2.drive();
     }

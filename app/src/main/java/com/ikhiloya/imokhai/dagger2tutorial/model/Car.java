@@ -6,7 +6,8 @@ import com.ikhiloya.imokhai.dagger2tutorial.dagger.PerActivity;
 
 import javax.inject.Inject;
 
-//here we want to make th
+//here we want to make the Car class a singleton within an activity-scope
+//It tells Dagger to create a single instance of Car within the same component
 @PerActivity
 public class Car {
     private static final String TAG = "Car";

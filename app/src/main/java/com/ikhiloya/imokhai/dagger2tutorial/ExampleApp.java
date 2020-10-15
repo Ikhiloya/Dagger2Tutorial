@@ -2,24 +2,20 @@ package com.ikhiloya.imokhai.dagger2tutorial;
 
 import android.app.Application;
 
-import com.ikhiloya.imokhai.dagger2tutorial.dagger.CarComponent;
-import com.ikhiloya.imokhai.dagger2tutorial.dagger.DaggerCarComponent;
+import com.ikhiloya.imokhai.dagger2tutorial.dagger.AppComponent;
+import com.ikhiloya.imokhai.dagger2tutorial.dagger.DaggerAppComponent;
 
 public class ExampleApp extends Application {
-    private CarComponent carComponent;
+    private AppComponent appComponent;
 
     @Override
     public void onCreate() {
         super.onCreate();
-
-        carComponent = DaggerCarComponent.builder()
-                .horsePower(200)
-                .engineCapacity(2909)
-                .build();
+        appComponent = DaggerAppComponent.create();
     }
 
 
-    public CarComponent getAppComponent() {
-        return carComponent;
+    public AppComponent getAppComponent() {
+        return appComponent;
     }
 }

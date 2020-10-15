@@ -3,9 +3,12 @@ package com.ikhiloya.imokhai.dagger2tutorial.model;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
-@Singleton
+//@Singleton
 public class Driver {
-    @Inject
-    public Driver() {
-    }
+    //Assuming we don't own this class.
+    //So we can't annotate it with @Inject
+
+//    @Inject
+//    public Driver() {
+//    }
 }
