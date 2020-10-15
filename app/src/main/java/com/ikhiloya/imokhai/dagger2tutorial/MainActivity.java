@@ -31,10 +31,18 @@ public class MainActivity extends AppCompatActivity {
 //                .engineCapacity(500)
 //                .build();
 //        car = carComponent.getCar();
-
 //        AppComponent appComponent = ((ExampleApp) getApplication()).getAppComponent();
+//        ActivityComponent activityComponent = ((ExampleApp) getApplication()).getAppComponent()
+//                .getActivityComponent(new DieselEngineModule(222));
+
+
         ActivityComponent activityComponent = ((ExampleApp) getApplication()).getAppComponent()
-                .getActivityComponent(new DieselEngineModule(222));
+                .getActivityComponentBuilder()
+                .horsePower(333)
+                .engineCapacity(999)
+                .build();
+
+
 //        ActivityComponent activityComponent = DaggerActivityComponent.builder()
 //                .horsePower(333)
 //                .engineCapacity(222)

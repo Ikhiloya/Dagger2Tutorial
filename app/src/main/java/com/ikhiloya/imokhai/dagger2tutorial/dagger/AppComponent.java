@@ -14,7 +14,8 @@ public interface AppComponent {
 
 //    Driver getDriver();
 
-    ActivityComponent getActivityComponent(DieselEngineModule dieselEngineModule);
+    //    ActivityComponent getActivityComponent(DieselEngineModule dieselEngineModule);
+    ActivityComponent.Builder getActivityComponentBuilder();
 
 
 }
