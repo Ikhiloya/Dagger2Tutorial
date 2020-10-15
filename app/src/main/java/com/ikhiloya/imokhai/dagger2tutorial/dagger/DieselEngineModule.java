@@ -4,9 +4,7 @@ import android.util.Log;
 
 import com.ikhiloya.imokhai.dagger2tutorial.model.DieselEngine;
 import com.ikhiloya.imokhai.dagger2tutorial.model.Engine;
-import com.ikhiloya.imokhai.dagger2tutorial.model.PetrolEngine;
 
-import dagger.Binds;
 import dagger.Module;
 import dagger.Provides;
 
