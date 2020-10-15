@@ -24,18 +24,24 @@ public interface ActivityComponent {
     void inject(MainActivity mainActivity);
 
     //overrides the default Dagger Builder pattern
-    @Subcomponent.Builder
-    interface Builder {
-        @BindsInstance
-        Builder horsePower(@Named("horse power") int horsePower);
+//    @Subcomponent.Builder
+//    interface Builder {
+//
+//        Builder horsePower(@BindsInstance @Named("horse power") int horsePower);
+//
+//        //        @BindsInstance
+//        Builder engineCapacity(@BindsInstance @Named("engine capacity") int engineCapacity);
+//
+//        //Here, we have to explicitly define the setter method on the interface since we created our Component Builder
+//        // otherwise it is created by default
+////        Builder appComponent(AppComponent appComponent);
+//
+//        ActivityComponent build();
+//    }
 
-        @BindsInstance
-        Builder engineCapacity(@Named("engine capacity") int engineCapacity);
-
-        //Here, we have to explicitly define the setter method on the interface since we created our Component Builder
-        // otherwise it is created by default
-//        Builder appComponent(AppComponent appComponent);
-
-        ActivityComponent build();
+    @Subcomponent.Factory
+    interface Factory {
+        ActivityComponent create(@BindsInstance @Named("horse power") int horsePower,
+                                 @BindsInstance @Named("engine capacity") int engineCapacity);
     }
 }

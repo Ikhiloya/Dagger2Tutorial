@@ -4,6 +4,7 @@ import android.app.Application;
 
 import com.ikhiloya.imokhai.dagger2tutorial.dagger.AppComponent;
 import com.ikhiloya.imokhai.dagger2tutorial.dagger.DaggerAppComponent;
+import com.ikhiloya.imokhai.dagger2tutorial.dagger.DriverModule;
 
 public class ExampleApp extends Application {
     private AppComponent appComponent;
@@ -11,7 +12,7 @@ public class ExampleApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        appComponent = DaggerAppComponent.create();
+        appComponent = DaggerAppComponent.factory().create(new DriverModule("John"));
     }
 
 

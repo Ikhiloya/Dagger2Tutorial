@@ -42,7 +42,7 @@ public class Car {
     }
 
     public void drive() {
-        Log.d(TAG, driver + " is driving " + this);
+        Log.d(TAG, driver + " " + driver.name + " is driving " + this);
     }
 
 }

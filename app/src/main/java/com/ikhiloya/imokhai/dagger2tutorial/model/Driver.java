@@ -11,4 +11,11 @@ public class Driver {
 //    @Inject
 //    public Driver() {
 //    }
+
+
+    String name;
+
+    public Driver(String name) {
+        this.name = name;
+    }
 }

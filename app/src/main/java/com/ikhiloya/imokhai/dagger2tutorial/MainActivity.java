@@ -36,11 +36,15 @@ public class MainActivity extends AppCompatActivity {
 //                .getActivityComponent(new DieselEngineModule(222));
 
 
+//        ActivityComponent activityComponent = ((ExampleApp) getApplication()).getAppComponent()
+//                .getActivityComponentBuilder()
+//                .horsePower(333)
+//                .engineCapacity(999)
+//                .build();
+
         ActivityComponent activityComponent = ((ExampleApp) getApplication()).getAppComponent()
-                .getActivityComponentBuilder()
-                .horsePower(333)
-                .engineCapacity(999)
-                .build();
+                .getActivityComponentFactory()
+                .create(4747, 8834);
 
 
 //        ActivityComponent activityComponent = DaggerActivityComponent.builder()
